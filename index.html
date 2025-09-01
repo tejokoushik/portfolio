@@ -1,72 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Example</title>
+    <title>Tejo N. Koushik - Graphic Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Inline CSS for styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #0f172a; /* slate-900 */
         }
-        h1 {
-            color: #333;
+        /* Custom scrollbar for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        p {
-            line-height: 1.6;
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0; /* slate-200 */
         }
-        a {
-            color: #007BFF;
-            text-decoration: none;
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8; /* slate-400 */
+            border-radius: 10px;
         }
-        a:hover {
-            text-decoration: underline;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* slate-500 */
         }
-        ul {
-            list-style-type: square;
+        .section-transition {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My HTML Page</h1>
-        <p>This is a simple example of an HTML document.</p>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800 hover:text-indigo-600 transition-colors">TNK.</a>
+            <ul class="hidden md:flex space-x-8 text-slate-600">
+                <li><a href="#about" class="hover:text-indigo-600 transition-colors">About</a></li>
+                <li><a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <ul class="flex flex-col space-y-4 text-slate-600">
+                <li><a href="#about" class="block py-2 hover:text-indigo-600 transition-colors">About</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-indigo-600 transition-colors">Projects</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-indigo-600 transition-colors">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
-	<h2>HTML Images</h2>
-	<p>HTML images are defined with the img tag:</p>
+    <main class="container mx-auto px-6 py-12 md:py-20">
 
-	<img src="images/IMG_2138.JPEG" alt="W3Schools.com" width="104" height="142">
-
-
-    <!-- Navigation Section -->
-    <nav>
-        <p>Quick Links:</p>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main Content Section -->
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It is used to structure content on the web.</p>
+        <!-- Hero Section -->
+        <section id="hero" class="text-center section-transition">
+            <img src="https://placehold.co/128x128/6366f1/ffffff?text=TNK" alt="Tejo N. Koushik" class="w-32 h-32 rounded-full mx-auto mb-6 ring-4 ring-indigo-200 shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-4">Hi, I'm Tejo N. Koushik</h1>
+            <p class="text-lg md:text-xl text-indigo-600 font-medium mb-8">Graphic Designer</p>
+            <p class="max-w-3xl mx-auto text-slate-600 mb-10 leading-relaxed">
+                A team-oriented, hardworking and talented graphic designer with great attention to detail and excellent communication skills.
+            </p>
+            <a href="#contact" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg">Get In Touch</a>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions, feel free to <a href="mailto:example@example.com">email me</a>.</p>
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 section-transition">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">About Me</h2>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        As a versatile graphic designer, I bring visual storytelling to life through diverse projects. My expertise spans corporate branding (logos, brochures, signages) for prominent companies, whimsical illustrations for children's storybooks, and meticulous content editing for intellectual properties (patents, dissertations). With a keen eye for detail and creative flair, I craft compelling visual narratives that captivate audiences.
+                    </p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Utilizing industry-standard tools like Adobe Creative Suite and Microsoft Office, I design, illustrate, and edit with precision and efficiency. I'm committed to ongoing learning and professional growth.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Illustrator</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Photoshop</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Indesign</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Powerpoint</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Word</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Excel</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-auto rounded-lg shadow-2xl overflow-hidden transform transition-transform duration-500 hover:scale-105">
+                         <img src="file:///D:/backup 21-02-2025/New folder/Tejo/IMG_2138_mod.jpg" alt="Tejo" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 section-transition">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">My Projects</h2>
+                <p class="max-w-2xl mx-auto text-slate-600">Some highlights from my portfolio:</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/c7d2fe/3730a3?text=Project+One" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Logo and Branding</h3>
+                        <p class="text-slate-600 mb-4">Developed a comprehensive brand identity for a health-focused brand, creating a visual system that inspires healthy living.</p>
+                        <a href="file:///D:/backup 21-02-2025/New folder/Tejo/My_work/Harvest copy.jpg" class="text-indigo-600 font-semibold hover:underline">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/a5b4fc/3730a3?text=Project+Two" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">App design</h3>
+                        <p class="text-slate-600 mb-4">Designed Bookmark's UI/UX to provide a seamless and intuitive reading experience, with clean design, personalized features, and easy navigation.</p>
+                        <a href="file:///D:/backup 21-02-2025/New folder/Tejo/POrtfolio/UI_UX_design.html" style="max-width: 100%; height:auto" class="text-indigo-600 font-semibold hover:underline">
+                            View Project &rarr;
+                    </a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+                    <img src="https://placehold.co/600x400/818cf8/ffffff?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Illustrations</h3>
+                        <p class="text-slate-600 mb-4">Whimsical illustrations that bring stories to life, crafted with vibrant colors and playful characters to captivate the minds of young readers.</p>
+                        <a href="file:///D:/backup 21-02-2025/New folder/Tejo/My_work/Illustrations.jpg" class="text-indigo-600 font-semibold hover:underline">Some illustrations &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 section-transition">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Let's Connect</h2>
+                <p class="max-w-2xl mx-auto text-slate-600 mb-10">
+                    I'm currently available for freelance projects and open to discussing new opportunities. Feel free to reach out!
+                </p>
+                <a href="mailto:tejo.koushik@gmail.com" class="inline-block bg-indigo-600 text-white font-bold py-4 px-10 rounded-full hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+                    tejo.koushik@gmail.com
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 My HTML Page. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-100 border-t border-slate-200">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-slate-600 mb-4 md:mb-0">&copy; 2025 Tejo N. Koushik. All rights reserved.</p>
+            <div class="flex space-x-6">
+                 <!-- LinkedIn Icon -->
+                <a href="http://www.linkedin.com/in/tejo-n-koushik" class="text-slate-500 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <!-- GitHub Icon -->
+                <a href="#" class="text-slate-500 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <!-- Twitter Icon -->
+                <a href="#" class="text-slate-500 hover:text-indigo-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.4 3.3 4.4s-1.4-.6-2.8-.9c-1.4 2.6-4.2 4.4-4.2 4.4s-3.5-1-4.2-5.2c-2.3-.4-5.2-2.3-5.2-2.3s1.4-.4 2.8 0c-2.3-1.4-4.2-4.4-4.2-4.4s3.5 1 5.2 1.4c.3-2.3 2.3-4.2 2.3-4.2s2.8.2 4.2 2.3c.7-.2 1.4-.4 1.4-.4Z"/></svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple fade-in animation on scroll
+        const sections = document.querySelectorAll('.section-transition');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                } else {
+                    // Optional: reset when scrolling out of view
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            observer.observe(section);
+        });
+    </script>
+
 </body>
 </html>
