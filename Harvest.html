@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
 <body>
- <button type="button"> Click Me! </button>
+ <button type="button" id= "back"> Back </button>
+    <script>
+        // Get a reference to the button element
+        const button = document.getElementById('back');
+
+        // Add an event listener for the 'click' event
+        button.addEventListener('click', function() {
+            // Redirect to 'another-page.html' when the button is clicked
+            window.location.href = 'index.html'; 
+            // Alternatively, use window.location.replace('another-page.html');
+            // if you want to prevent the user from navigating back to the current page.
+        });
+    </script>
+
 
 <img src="Harvest.jpg" alt="Harvest" display: block; margin-left: auto; margin-right: auto; width: 40%;>
 
